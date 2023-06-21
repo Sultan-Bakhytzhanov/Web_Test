@@ -14,7 +14,9 @@ html {
 .wrapper {
 	width: 100%;
 	height: 100%;
-	display: table;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .main {
@@ -38,6 +40,11 @@ html {
 	padding: 5px;
 }
 
+div {
+	width: 75vw;
+	text-align: center;
+}
+
 .quiz__body {
 	margin: 10px;
 }
@@ -56,7 +63,7 @@ html {
 .button {
 	border: 0;
 	border-radius: 10px;
-	background: #6477EB;
+	background: #6477eb;
 	color: #fff;
 	padding: 10px 25px;
 	width: 70%;
@@ -67,13 +74,13 @@ html {
 }
 
 .button_wrong {
-	background: #EB6465;
+	background: #eb6465;
 }
 
 .button_correct {
-	background: #5EB97D;
+	background: #5eb97d;
 }
 
 .button_passive {
-	background: #B3B3B3;
+	background: #b3b3b3;
 }
