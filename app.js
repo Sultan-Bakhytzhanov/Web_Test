@@ -110,7 +110,10 @@ const results = [
 	new Result('Ну на троечку чисто', 50),
 	new Result('Вот это неплохо, харош', 75),
 	new Result('Да ты программист', 100),
-	new Result('Ты либо Султан, либо ты загуглил, бля буду', 120),
+	new Result(
+		'Ты либо Султан, либо ты загуглил, бля буду (Ок, возможно ты Лера...Возможно)',
+		130
+	),
 ];
 
 // Questions array
@@ -158,7 +161,7 @@ const questions = [
 		]
 	),
 	new Question(
-		'Для задания размеров тэгу <frameset> требуются следующие атрибуты:',
+		'Для задания размеров тэгу &ltframeset&gt требуются следующие атрибуты:',
 		[
 			new Answer(`•	Строки и столбцы `, 1),
 			new Answer(`•	Площадь и толщина границ`, 0),
@@ -336,7 +339,7 @@ const questions = [
 			),
 			new Answer(
 				`•	&ltimg src=”flower.jpg”
-		height=”300 px” alt=”” +
+		height=”300 px” alt=”” 
 		width=”750 px”/&gt
 		`,
 				1
@@ -490,12 +493,6 @@ const questions = [
 		new Answer(`•	метод шифрования данных`, 0),
 	]),
 	new Question(`Гиперссылки на web – странице могут обеспечить переход:`, [
-		new Answer('сплайн', 0),
-		new Answer('отрезок', 0),
-		new Answer('кривая Безье', 1),
-		new Answer('нет правильного ответа', 0),
-	]),
-	new Question('Под термином «Кривая Безье» подразумевается:', [
 		new Answer(`•	только на форму передачи данных`, 0),
 		new Answer(`•	только в пределах данной web – страницы `, 0),
 		new Answer(`•	на любую web – страницу данного региона`, 0),
@@ -537,16 +534,16 @@ const questions = [
 		]
 	),
 	new Question(`Укажите корректную запись для создания чек-бокса:`, [
-		new Answer(`•	<input checkbox>`, 0),
-		new Answer(`•	<input type=”checkbox”>`, 1),
-		new Answer(`•	<type input=”checkbox”>`, 0),
-		new Answer(`•	<type checkbox =” input ”>`, 0),
+		new Answer(`•	&ltinput checkbox&gt`, 0),
+		new Answer(`•	&ltinput type=”checkbox”&gt`, 1),
+		new Answer(`•	&lttype input=”checkbox”&gt`, 0),
+		new Answer(`•	&lttype checkbox =” input ”&gt`, 0),
 	]),
 	new Question(`Укажите корректную запись для создания выпадающего списка:`, [
-		new Answer(`•	<dropdown list>`, 0),
-		new Answer(`•	<input dropdown list>`, 0),
-		new Answer(`• <input type=”dropdown”>`, 1),
-		new Answer(`•	<input dropdown =” type ”>`, 0),
+		new Answer(`•	&ltdropdown list&gt`, 0),
+		new Answer(`•	&ltinput dropdown list&gt`, 0),
+		new Answer(`• &ltinput type=”dropdown”&gt`, 1),
+		new Answer(`•	&ltinput dropdown =” type ”&gt`, 0),
 	]),
 	new Question(
 		`Какой атрибут элемента FОRМ определяет список кодировок для водимых данных?`,
@@ -558,7 +555,7 @@ const questions = [
 		]
 	),
 	new Question(
-		`Что пользователь увидит на экране после выполнения следующей команды? <input type="radio">`,
+		`Что пользователь увидит на экране после выполнения следующей команды? &ltinput type="radio"&gt`,
 		[
 			new Answer(`•	Поле для ввода одной строки текста`, 0),
 			new Answer(`•	Текстовое поле для ввода пароля `, 0),
@@ -570,7 +567,7 @@ const questions = [
 		]
 	),
 	new Question(
-		`Что пользователь увидит на экране после выполнения следующей команды? <input type="reset">`,
+		`Что пользователь увидит на экране после выполнения следующей команды? &ltinput type="reset"&gt`,
 		[
 			new Answer(`•	Кнопку, при нажатии которой вся форма очищается`, 1),
 			new Answer(`•	Обычную командную кнопку`, 0),
@@ -585,7 +582,7 @@ const questions = [
 		]
 	),
 	new Question(
-		`Какой элемент создает на веб-странице раскрывающийся список (также называемый раскрывающимся или выпадающим меню), позволяющий выбрать одно значение из множества возможных?`,
+		`Какой элемент создает на веб-странице раскрывающийся список (также называемый раскрывающимся или выпадающим меню),\n позволяющий выбрать одно значение из множества возможных?`,
 		[
 			new Answer(`•	Radio`, 0),
 			new Answer(`•	Select`, 1),
@@ -1006,13 +1003,13 @@ const questions = [
 	new Question(
 		`В каких случаях атрибут выравнивания аlign имеет более высокий приоритет?`,
 		[
-			new Answer(`•	<ТАВIЕ аlign="lеft">`, 0),
-			new Answer(`•	<ТН аlign="lеft">`, 1),
-			new Answer(`•	<ОL аlign="lеft">`, 0),
-			new Answer(`•	<UL аlign="lеft">`, 0),
+			new Answer(`•	&ltТАВIЕ аlign="lеft"&gt`, 0),
+			new Answer(`•	&ltТН аlign="lеft"&gt`, 1),
+			new Answer(`•	&ltОL аlign="lеft"&gt`, 0),
+			new Answer(`•	&ltUL аlign="lеft"&gt`, 0),
 		]
 	),
-	new Question(`Какой атрибут принадлежит тегу <АREА>?`, [
+	new Question(`Какой атрибут принадлежит тегу &ltАREА&gt?`, [
 		new Answer(`•	CIRCLE`, 0),
 		new Answer(`•	SHАPE`, 1),
 		new Answer(`•	SRC`, 0),
@@ -1027,10 +1024,10 @@ const questions = [
 	new Question(
 		`Какой из приведенных примеров задает гипертекстовую ссылку из документа 1.html на другой документ?`,
 		[
-			new Answer(`•	<А HREF="#m1">ссылка`, 0),
-			new Answer(`•	<А HREF=m1>ссылка`, 0),
-			new Answer(`•	<А HREF="2.html&&m1">ссылка`, 0),
-			new Answer(`•	<А HREF="2.html#m1">ссылка  `, 1),
+			new Answer(`•	&ltА HREF="#m1"&gtссылка`, 0),
+			new Answer(`•	&ltА HREF=m1&gtссылка`, 0),
+			new Answer(`•	&ltА HREF="2.html&&m1"&gtссылка`, 0),
+			new Answer(`•	&ltА HREF="2.html#m1"&gtссылка  `, 1),
 		]
 	),
 	new Question(`Какой из приведенных фрагментов кода создает переключатель?`, [
@@ -1061,13 +1058,13 @@ const questions = [
 		new Answer(`•	HТМL`, 0),
 	]),
 	new Question(`В каком примере корректно описан элемент ТR?`, [
-		new Answer(`•	<ТD> <ТD>ячейка1  `, 0),
-		new Answer(`•	<ТD> <ТR>ячейка1ячейка2<ТD>`, 0),
-		new Answer(`•	<ТR> <ТD>ячейка1<TR>`, 0),
-		new Answer(`•	<ТR> <ТD>ячейка1  `, 1),
+		new Answer(`•	&ltТD&gt &ltТD&gtячейка1  `, 0),
+		new Answer(`•	&ltТD&gt &ltТR&gtячейка1ячейка2&ltТD&gt`, 0),
+		new Answer(`•	&ltТR&gt &ltТD&gtячейка1&ltTR&gt`, 0),
+		new Answer(`•	&ltТR&gt &ltТD&gtячейка1  `, 1),
 	]),
 	new Question(
-		`Какой атрибут тега <img> указывает файл изображения и путь к нему? `,
+		`Какой атрибут тега &ltimg&gt указывает файл изображения и путь к нему? `,
 		[
 			new Answer(`•	АLIGN`, 0),
 			new Answer(`•	SRC`, 1),
@@ -1325,7 +1322,7 @@ const questions = [
 		`При наведении курсора мыши на пункт меню в CSS его внешний вид может изменяться, привлекая к себе внимание пользователя. Создать такой эффект можно с помощью`,
 		[
 			new Answer(`•	псевдо-элемент :first`, 0),
-			new Answer(`•	ссылки <a>`, 0),
+			new Answer(`•	ссылки &lta&gt`, 0),
 			new Answer(`•	атрибута effect`, 0),
 			new Answer(`•	псевдо-класса :hover`, 1),
 		]
@@ -1364,7 +1361,7 @@ const questions = [
 		]
 	),
 	new Question(
-		`Отметьте верный код подключения стилей CSS с помощью тега <link>`,
+		`Отметьте верный код подключения стилей CSS с помощью тега &ltlink&gt`,
 		[
 			new Answer(
 				`•&ltlink rel="stylesheet" href="style.css" type="text/css"&gt `,
@@ -1394,12 +1391,6 @@ const questions = [
 		]
 	),
 	new Question(`Что такое "белое пространство" в дизайне?`, [
-		new Answer(`• display: block`, 1),
-		new Answer(`• display: inline`, 0),
-		new Answer(`• display: inline-block`, 0),
-		new Answer(`• position: absolute`, 0),
-	]),
-	new Question(`Какое свойство CSS позволяет сделать элемент "плавающим"?`, [
 		new Answer(`• Размер области, которую занимает элемент дизайна`, 0),
 		new Answer(`• Неприменение цвета в дизайне`, 0),
 		new Answer(`• Пространство между элементами на странице `, 0),
